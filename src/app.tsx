@@ -2,6 +2,8 @@ import Taro, { Component, Config } from '@tarojs/taro'
 import Index from './pages/index'
 
 import './app.less'
+// eslint-disable-next-line import/first
+import 'taro-ui/dist/style/index.scss'
 
 // 如果需要在 h5 环境中开启 React Devtools
 // 取消以下注释：
@@ -28,13 +30,37 @@ class App extends Component {
    */
   config: Config = {
     pages: [
-      'pages/index/index'
+      'pages/index/index',
+      'pages/person/index',
+      'pages/job/index'
     ],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
-      navigationBarTitleText: 'WeChat',
+      navigationBarTitleText: '测试',
       navigationBarTextStyle: 'black'
+    },
+    tabBar: {
+      list: [
+        {
+          pagePath: "pages/index/index",
+          text: "首页",
+          iconPath: "",
+          selectedIconPath: ""
+        },
+        {
+          pagePath: "pages/job/index",
+          text: "职位",
+          iconPath: "",
+          selectedIconPath: ""
+        },
+        {
+          pagePath: "pages/person/index",
+          text: "个人中心",
+          iconPath: "",
+          selectedIconPath: ""
+        }
+      ]
     }
   }
 
