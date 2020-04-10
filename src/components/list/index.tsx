@@ -1,5 +1,5 @@
-import Taro, { Component, Config } from '@tarojs/taro'
-import {ScrollView, View } from '@tarojs/components'
+import Taro, { Component } from '@tarojs/taro'
+import {ScrollView } from '@tarojs/components'
 import './index.less'
 
 interface IState {
@@ -7,7 +7,8 @@ interface IState {
 }
 
 interface IProps {
-  className: String
+  className?: String,
+  style?: Object
 }
 
 export default class List extends Component<IProps, IState>{
@@ -17,12 +18,15 @@ export default class List extends Component<IProps, IState>{
     errorText: "出错了，重新加载",
     loadingText: "正在拼命加载中..."
   }
+  
   constructor(props) {
     super(props)
     this.state = {
       loading: false,
     }
   }
+
+  static externalClasses = ['my-class']
 
   // 监听滚动滚动事件
   onScroll = (e) => {
@@ -35,13 +39,16 @@ export default class List extends Component<IProps, IState>{
   // 
 
   render () {
-    const { className, children } = this.props;
+    const { children } = this.props;
     return (
       <ScrollView
-        className={`${className} scroll-view`}
+        scrollY
+        scrollWithAnimation
+        scrollTop={0}
+        className='index__list my-class'
         onScroll={this.onScroll}
       >
-        {children}
+        { children}
       </ScrollView>
     )
   }

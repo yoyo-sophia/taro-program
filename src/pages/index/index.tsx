@@ -1,14 +1,25 @@
 import Taro, { Component, Config } from '@tarojs/taro'
-import { View, Text, Input, Button, Image } from '@tarojs/components'
-import { AtIcon, AtInput  } from "taro-ui"
+import { View, Text, Image, Input } from '@tarojs/components'
+import { AtIcon, AtInput, AtSearchBar   } from "taro-ui"
 import './index.less'
 
 import banner from '../../assets/img/index/banner.jpg'
 import List from '../../components/list/index'
+
+// 导航Icon Image
+import hot from '../../assets/img/index/icon-hot.png';
+import nearby from '../../assets/img/index/icon-nearby.png';
+import newest from '../../assets/img/index/icon-newest.png';
+import vacation from '../../assets/img/index/icon-vacation.png';
+
 // ts 变量约束
+interface IlistObject {
+  id: Number,
+  text: String
+}
 interface IState {
   value: string,
-  lists: Array
+  lists: Array<IlistObject>
 }
 interface IProps {
   // <T>(value:T):T
@@ -47,7 +58,26 @@ export default class Index extends Component <IProps,IState>{
           id:7,
           text: "test7"
         },
-
+        {
+          id:7,
+          text: "test7"
+        },
+        {
+          id:7,
+          text: "test7"
+        },
+        {
+          id:7,
+          text: "test7"
+        },
+        {
+          id:7,
+          text: "test7"
+        },
+        {
+          id:7,
+          text: "test7"
+        }
       ]
     }
   }
@@ -91,33 +121,62 @@ export default class Index extends Component <IProps,IState>{
       <View className='index-wrapper'>
         {/* Search */}
         <View className='search-bar'>
-          <Text>地点</Text>
-          <AtInput
+          <Text className='search__location'>地点</Text>
+          <Input
+            className='search__item'
             name='value'
             type='text'
-            clear
             placeholder='请输入岗位名称' 
             value={this.state.value}  
             onChange={this.onChange}
           />
-          <AtIcon prefixClass='icon' value='close' size='20' color='#f9f9f9'></AtIcon>  
         </View>
+
+        {/* 导航栏 */}
+        <View className='index-type'>
+          <View>
+            <Image src={hot} />
+            <Text className='f-24'>热招兼职</Text>
+          </View>
+
+          <View>
+            <Image src={nearby} />
+            <Text className='f-24'>离我最近</Text>
+          </View>
+
+          <View>
+            <Image src={newest} />
+            <Text className='f-24'>暑期实习</Text>
+          </View>
+
+          <View>
+            <Image src={vacation} />
+            <Text className='f-24'>最新职位</Text>
+          </View>
+          
+        </View>
+
         {/* banner */}
         <View className='banner__img'>
           <Image src={banner} />
         </View>
+
         {/* list */}
-        <List className='index-list'>
-          {
-            lists.map(item => {
-              return (
-                <View key={item.id}>
+          <List 
+            my-class='index__list'
+          >
+            {
+              lists.map((item,index) => {
+                return (
+                  <View key={index}> 
+                    {item.text} 
                   {item.text}
-                </View>
-              )
-            })
-          }
-        </List>
+                    {item.text} 
+                  </View>
+                )
+              })
+            }
+          </List>
       </View>
     )
   }

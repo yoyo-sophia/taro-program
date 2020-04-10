@@ -45,20 +45,20 @@ class App extends Component {
         {
           pagePath: "pages/index/index",
           text: "首页",
-          iconPath: "",
-          selectedIconPath: ""
+          iconPath: "assets/img/tabbar/icon-index.png",
+          selectedIconPath: "assets/img/tabbar/icon-index-active.png"
         },
         {
           pagePath: "pages/job/index",
           text: "职位",
-          iconPath: "",
-          selectedIconPath: ""
+          iconPath: "assets/img/tabbar/icon-part-time.png",
+          selectedIconPath: "assets/img/tabbar/icon-part-time-active.png"
         },
         {
           pagePath: "pages/person/index",
           text: "个人中心",
-          iconPath: "",
-          selectedIconPath: ""
+          iconPath: "assets/img/tabbar/icon-center.png",
+          selectedIconPath: "assets/img/tabbar/icon-center-active.png"
         }
       ]
     }
