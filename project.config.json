@@ -46,6 +46,19 @@
 					"id": -1,
 					"name": "pages/index/index",
 					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/person/feedback/index",
+					"pathName": "pages/person/feedback/index",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/person/self_evaluation/index",
+					"pathName": "pages/person/self_evaluation/index",
 					"scene": null
 				}
 			]

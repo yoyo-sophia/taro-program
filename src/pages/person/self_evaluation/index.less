@@ -1,0 +1,43 @@
+@primary-color: #F85F48;
+.self-evaluation {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #EFEFF4;
+  .content-wrapper {
+    margin-bottom: auto;
+  }
+  .self__title {
+    display: block;
+    padding: 20px 30px;
+    font-size: 28px;
+    color: #333;
+    background-color: #fff;
+  }
+  .self__content {
+    height: 360px;
+    padding: 30px;
+    font-size: 28px;
+    color: #333;
+    background-color: #fff;
+  }
+  .btn-wrapper {
+    display: flex;
+    margin-top: auto;
+    padding: 25px 0 0;
+    button {
+      flex: 1;
+      font-style: 36px;
+      border: none;
+      border-radius: 0;
+      &:first-child {
+        color: @primary-color;
+        background-color: #fff;
+      }
+      &:last-child {
+        color: #fff;
+        background-color: @primary-color;
+      }
+    }
+  }
+}

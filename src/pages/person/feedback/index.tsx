@@ -1,6 +1,6 @@
 import Taro, { Component, Config } from "@tarojs/taro"
 import { View, Text, Textarea, Button, Input } from "@tarojs/components"
-
+import './index.less'
 interface IState {
   contact: string,
   feedBack: string
@@ -26,20 +26,20 @@ export default class Index  extends Component<IProp,IState> {
 
   render() {
     return (
-      <View>
+      <View className='feedback'>
         {/* 反馈意见 */}
-        <View>
-         <Textarea value={this.state.feedBack} />
+        <View className='m-t-25'>
+         <Textarea placeholder='请输入您的反馈信息' className='feedback__content' value={this.state.feedBack} />
         </View>
 
         {/* 联系方式 */}
 
-        <View>
+        <View className='contact m-t-25'>
           <Text>联系方式：</Text>
-          <Input value={this.state.contact} />
+          <Input placeholder='请输入您的邮箱/微信号' value={this.state.contact} />
         </View>
         
-        <Button>提交</Button>
+        <Button className='btn-submmit'>提交</Button>
 
       </View>
     )

@@ -32,7 +32,9 @@ class App extends Component {
     pages: [
       'pages/index/index',
       'pages/person/index',
-      'pages/job/index'
+      'pages/job/index',
+      'pages/person/feedback/index',
+      'pages/person/self_evaluation/index'
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -59,7 +61,7 @@ class App extends Component {
           text: "个人中心",
           iconPath: "assets/img/tabbar/icon-center.png",
           selectedIconPath: "assets/img/tabbar/icon-center-active.png"
-        }
+        },
       ]
     }
   }
