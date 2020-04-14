@@ -1,6 +1,7 @@
 import Taro, { Component, Config } from "@tarojs/taro"
 import { View, Text, Textarea, Button, Input } from "@tarojs/components"
 import './index.less'
+
 interface IState {
   contact: string,
   feedBack: string

@@ -53,12 +53,20 @@
 					"id": -1,
 					"name": "pages/person/feedback/index",
 					"pathName": "pages/person/feedback/index",
+					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "pages/person/self_evaluation/index",
 					"pathName": "pages/person/self_evaluation/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/person/experience/index",
+					"pathName": "pages/person/experience/index",
 					"scene": null
 				}
 			]

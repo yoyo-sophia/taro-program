@@ -34,7 +34,8 @@ class App extends Component {
       'pages/person/index',
       'pages/job/index',
       'pages/person/feedback/index',
-      'pages/person/self_evaluation/index'
+      'pages/person/self_evaluation/index',
+      'pages/person/experience/index'
     ],
     window: {
       backgroundTextStyle: 'light',
